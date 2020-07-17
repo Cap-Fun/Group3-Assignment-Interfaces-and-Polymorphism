@@ -1,7 +1,7 @@
-/*Author: Paola Flores ID T00651883*/
 
-public class LoudGoose extends WaterFowl
+public class LoudGoose extends WaterFowl implements Attacker
 {
+     private int killCount;
      public LoudGoose()
      {
           super();
@@ -37,4 +37,108 @@ public class LoudGoose extends WaterFowl
                System.out.println(super.name + " is swimming");
           }
      }//end of swim()
+     public void attack(HappyPig animal)
+     {
+          //int killCount;
+          
+          if (animal.getClass().getSimpleName().equals("LoudGoose"))
+          {
+               System.out.println("I cannot attack, it is my friend!!");
+          }
+          else
+          {
+               if(animal.health==1)
+               {
+                    animal.hit();
+                    killCount++;
+                    System.out.println(this.name + " got a Kill Point!!");
+                    System.out.println("Kill points: " + this.getKillCount());
+               }
+               else 
+               {
+                    animal.hit();
+               }
+          }
+          
+     }//end of attack()
+     
+     public void attack(CuriousBunny animal)
+     {
+          //int killCount;
+          
+          if (animal.getClass().getSimpleName().equals("LoudGoose"))
+          {
+               System.out.println("I cannot attack, it is my friend!!");
+          }
+          else
+          {
+               if(animal.health==1)
+               {
+                    animal.hit();
+                    killCount++;
+                    System.out.println(this.name + " got a Kill Point!!");
+                    System.out.println("Kill points: " + this.getKillCount());
+               }
+               else 
+               {
+                    animal.hit();
+               }
+          }
+          
+     }//end of attack()
+     
+     public void attack(LoudGoose animal)
+     {
+          //int killCount;
+          
+          if (animal.getClass().getSimpleName().equals("LoudGoose"))
+          {
+               System.out.println("I cannot attack, it is my friend!!");
+          }
+          else
+          {
+               if(animal.health==1)
+               {
+                    animal.hit();
+                    killCount++;
+                    System.out.println(this.name + " got a Kill Point!!");
+                    System.out.println("Kill points: " + this.getKillCount());
+               }
+               else 
+               {
+                    animal.hit();
+               }
+          }
+          
+     }//end of attack()
+     
+     public void attack(AngryDuck animal)
+     {
+          //int killCount;
+          
+          if (animal.getClass().getSimpleName().equals("LoudGoose"))
+          {
+               System.out.println("I cannot attack, it is my friend!!");
+          }
+          else
+          {
+               if(animal.health==1)
+               {
+                    animal.hit();
+                    killCount++;
+                    System.out.println(this.name + " got a Kill Point!!");
+                    System.out.println("Kill points: " + this.getKillCount());
+               }
+               else 
+               {
+                    animal.hit();
+               }
+          }
+          
+     }//end of attack()
+     
+     public int getKillCount()
+     {
+          return killCount;
+     }//end of getKillCount()
 }//end of class
