@@ -1,6 +1,5 @@
-/*Author: Paola Flores ID T00651883 */
 
-public abstract class WaterFowl extends Animal
+public abstract class WaterFowl extends Animal implements Attacker
 {
      protected boolean isFlying;
      
