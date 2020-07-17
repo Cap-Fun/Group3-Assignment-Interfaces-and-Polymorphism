@@ -5,6 +5,14 @@ public abstract class Animal
      protected String name, primaryColor;
      protected int health;
      protected static int animalCount;
+
+     //map
+     public static final int WIDTH = 1000;
+     public static final int HEIGHT = 1000;
+     public static final int HALF = 500; 
+     //initial position (x,y)=(0,0)
+     public static int x = 0;
+     public static int y = 0;
      
      public Animal()
      {

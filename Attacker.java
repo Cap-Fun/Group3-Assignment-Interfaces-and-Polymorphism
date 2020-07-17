@@ -5,5 +5,4 @@
  {
    public void attack();
    public int getKillCount();
-  
  }
