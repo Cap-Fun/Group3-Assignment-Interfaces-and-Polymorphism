@@ -1,4 +1,4 @@
-/*Author: Paola Flores ID T00651883*/
+/*Author: Paola Flores ID T00651883  ADD YOUR STUDENDT ID HERE*/
 
 public class Driver
 {
@@ -12,14 +12,13 @@ public class Driver
           System.out.println(pato.getColor());
           //testing hit actually reducing health 
           pato.hit();
-          pato.hit();
-          pato.hit();
-          //testing is actions are not performed after the animal is dead
           pato.fly();
           //testing when animal is not flying
           System.out.println(pato.isItFlying());
           //testing toString() to show name and color of the animal
           System.out.println(pato.toString());
+          
+          AngryDuck poli = new AngryDuck("Poli","white");
           
           System.out.println();
           
@@ -39,9 +38,6 @@ public class Driver
           //testing rolling action
           pinky.roll();
           pinky.hit();
-          pinky.hit();
-          //testing sleeping when animal is dead (cannot perfom action)
-          pinky.sleep();
           //testing toString() to show name and color of the animal
           System.out.println(pinky.toString());
           
@@ -51,7 +47,6 @@ public class Driver
           //testing setters
           violet.setName("Violet");
           violet.setColor("purple");
-          violet.hit();
           violet.hit();
           //testing if animal is flying while being alive
           System.out.println(violet.isItFlying());
@@ -68,17 +63,52 @@ public class Driver
           System.out.print("Animals alive ");
           Animal.getCount();
           
+          System.out.println();
+          
           System.out.println("New thing testing:------------------------------ " ); 
           System.out.println(blacky.getPosition());
+          System.out.println();
           System.out.println( pato.getPosition()); 
           pato.teleport(1100,500);
           System.out.println( pato.getPosition()); 
           pato.teleport(1000,500);
+          System.out.println();
           blacky.teleport(1100,500);
           blacky.teleport(500,500);
           blacky.teleport(600,500);
           
+          System.out.println();
           
+          //Testing attaker interface
+          System.out.println("A fight is about to start!!!");
+          System.out.println();
+          System.out.print("Violet is going to attack, ");
+          violet.attack(pinky);
+          violet.getKillCount();
+          System.out.println();
+          System.out.print("Pato is going to attack, ");
+          pato.attack(violet);
+          System.out.println();
+          System.out.print("Violet is going to attack, ");
+          violet.attack(pato);
+          System.out.println();
+          System.out.print("Violet is going to attack, ");
+          violet.attack(blacky);
+          System.out.println();
+          System.out.print("Pato is going to attack, ");
+          pato.attack(violet);
+          pato.getKillCount();
+          //testing that dead animals cannot attack
+          System.out.println();
+          violet.attack(pato);
+          //testing to attack animals from the same class (it should not attack)
+          System.out.println();
+          System.out.print("Pato is going to attack, ");
+          pato.attack(poli);
+          
+          System.out.println();
+          System.out.print("Animals alive ");
+          Animal.getCount();
           
           
           
