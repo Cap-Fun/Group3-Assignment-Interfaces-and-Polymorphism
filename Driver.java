@@ -1,4 +1,6 @@
-/*Author: Paola Flores ID T00651883  ADD YOUR STUDENDT ID HERE*/
+/*Author: Paola Flores ID T00651883
+Jasleen Bains ID T00651489
+ADD YOUR STUDENDT ID HERE*/
 
 public class Driver
 {
@@ -80,6 +82,7 @@ public class Driver
           System.out.println();
           
           //Testing attaker interface
+          System.out.println("Testing Attacker Interface:-----------------------");
           System.out.println("A fight is about to start!!!");
           System.out.println();
           System.out.print("Violet is going to attack, ");
@@ -109,10 +112,7 @@ public class Driver
           System.out.println();
           System.out.print("Animals alive ");
           Animal.getCount();
-          
-          
-          
-          
+ 
      }//end of main()
      
 }//end of class
