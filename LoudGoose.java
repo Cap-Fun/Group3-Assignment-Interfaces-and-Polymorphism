@@ -1,4 +1,4 @@
-
+/* Jasleen Bains  ID:- T00651489 */
 public class LoudGoose extends WaterFowl implements Attacker
 {
      private int killCount;
@@ -37,11 +37,15 @@ public class LoudGoose extends WaterFowl implements Attacker
                System.out.println(super.name + " is swimming");
           }
      }//end of swim()
+     
      public void attack(HappyPig animal)
      {
-          //int killCount;
-          
-          if (animal.getClass().getSimpleName().equals("LoudGoose"))
+         
+          if (this.health==0)
+          {
+               System.out.println(this.name + " cannot attack, it is already dead");
+          }
+          else if (animal.getClass().getSimpleName().equals("LoudGoose"))
           {
                System.out.println("I cannot attack, it is my friend!!");
           }
@@ -64,9 +68,12 @@ public class LoudGoose extends WaterFowl implements Attacker
      
      public void attack(CuriousBunny animal)
      {
-          //int killCount;
-          
-          if (animal.getClass().getSimpleName().equals("LoudGoose"))
+          if (this.health==0)
+          {
+               System.out.println(this.name + " cannot attack, it is already dead");
+          }
+          else
+               if (animal.getClass().getSimpleName().equals("LoudGoose"))
           {
                System.out.println("I cannot attack, it is my friend!!");
           }
@@ -89,9 +96,13 @@ public class LoudGoose extends WaterFowl implements Attacker
      
      public void attack(LoudGoose animal)
      {
-          //int killCount;
           
-          if (animal.getClass().getSimpleName().equals("LoudGoose"))
+          if (this.health==0)
+          {
+               System.out.println(this.name + " cannot attack, it is already dead");
+          }
+          else
+               if (animal.getClass().getSimpleName().equals("LoudGoose"))
           {
                System.out.println("I cannot attack, it is my friend!!");
           }
@@ -114,9 +125,13 @@ public class LoudGoose extends WaterFowl implements Attacker
      
      public void attack(AngryDuck animal)
      {
-          //int killCount;
-          
-          if (animal.getClass().getSimpleName().equals("LoudGoose"))
+         
+          if (this.health==0)
+          {
+               System.out.println(this.name + " cannot attack, it is already dead");
+          }
+          else
+               if (animal.getClass().getSimpleName().equals("LoudGoose"))
           {
                System.out.println("I cannot attack, it is my friend!!");
           }
