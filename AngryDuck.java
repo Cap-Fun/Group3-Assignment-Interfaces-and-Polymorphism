@@ -1,3 +1,4 @@
+/*Authors: Paola Flores ID T00651883 ADD STUDENTS ID Haitao*/
 public class AngryDuck extends WaterFowl implements Attacker, Teleporter
 {
      private int killCount;
@@ -58,17 +59,20 @@ public class AngryDuck extends WaterFowl implements Attacker, Teleporter
           
      }//end of teleport()
      
-          public String getPosition() 
+     public String getPosition() 
      {
           return this.getName() + "'s position is:(" + x + "," + y +")";
      }//end of getPosition() 
      
-                                                    /////////
-      public void attack(HappyPig animal)
+     /////////
+     public void attack(HappyPig animal)
      {
-          //int killCount;
-          
-          if (animal.getClass().getSimpleName().equals("LoudGoose"))
+         
+          if (this.health==0)
+          {
+               System.out.println(this.name + " cannot attack, it is already dead");
+          }
+          else if (animal.getClass().getSimpleName().equals("AngryDuck"))
           {
                System.out.println("I cannot attack, it is my friend!!");
           }
@@ -91,9 +95,12 @@ public class AngryDuck extends WaterFowl implements Attacker, Teleporter
      
      public void attack(CuriousBunny animal)
      {
-          //int killCount;
-          
-          if (animal.getClass().getSimpleName().equals("LoudGoose"))
+          if (this.health==0)
+          {
+               System.out.println(this.name + " cannot attack, it is already dead");
+          }
+          else
+               if (animal.getClass().getSimpleName().equals("AngryDuck"))
           {
                System.out.println("I cannot attack, it is my friend!!");
           }
@@ -116,9 +123,13 @@ public class AngryDuck extends WaterFowl implements Attacker, Teleporter
      
      public void attack(LoudGoose animal)
      {
-          //int killCount;
           
-          if (animal.getClass().getSimpleName().equals("LoudGoose"))
+          if (this.health==0)
+          {
+               System.out.println(this.name + " cannot attack, it is already dead");
+          }
+          else
+               if (animal.getClass().getSimpleName().equals("AngryDuck"))
           {
                System.out.println("I cannot attack, it is my friend!!");
           }
@@ -141,9 +152,13 @@ public class AngryDuck extends WaterFowl implements Attacker, Teleporter
      
      public void attack(AngryDuck animal)
      {
-          //int killCount;
-          
-          if (animal.getClass().getSimpleName().equals("LoudGoose"))
+         
+          if (this.health==0)
+          {
+               System.out.println(this.name + " cannot attack, it is already dead");
+          }
+          else
+               if (animal.getClass().getSimpleName().equals("AngryDuck"))
           {
                System.out.println("I cannot attack, it is my friend!!");
           }
