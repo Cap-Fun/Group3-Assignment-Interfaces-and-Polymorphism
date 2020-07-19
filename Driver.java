@@ -67,7 +67,8 @@ public class Driver
           
           System.out.println();
           
-          System.out.println("New thing testing:------------------------------ " ); 
+          //Testing attaker interface
+          System.out.println("Testing attaker interface:------------------------------ " ); 
           System.out.println(blacky.getPosition());
           System.out.println();
           System.out.println( pato.getPosition()); 
